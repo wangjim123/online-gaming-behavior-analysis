@@ -1,10 +1,8 @@
 import pandas as pd
 import lightgbm as lgb
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import classification_report, accuracy_score
-import matplotlib.pyplot as plt
-import seaborn as sns
-import plot_feature_importance
+from sklearn.metrics import accuracy_score
+import Data1_plot_feature_importance
 
 def main(df1):
     df = df1.copy()
@@ -43,7 +41,7 @@ def main(df1):
     model_A, acc_A = evaluate_lgbm(
         X_train_A, X_test_A, y_train, y_test, exp_name="組合 A：全部原始特徵"
     )
-    plot_feature_importance.main(
+    Data1_plot_feature_importance.main(
         model_A, X_train_A.columns, "Feature Importance -組合 A (全部原始特徵)"
     )
 
@@ -61,7 +59,7 @@ def main(df1):
         X_train_B, X_test_B, y_train, y_test, exp_name="組合 B：新增黏著度特徵"
     )
 
-    plot_feature_importance.main(
+    Data1_plot_feature_importance.main(
         model_B, X_train_B.columns, "Feature Importance - 組合 B (新增黏著度特徵)"
     )
 
@@ -84,7 +82,7 @@ def main(df1):
     model_C, acc_C = evaluate_lgbm(
         X_train_C, X_test_C, y_train, y_test, exp_name="組合 C：刪除低重要性特徵"
     )
-    plot_feature_importance.main(
+    Data1_plot_feature_importance.main(
         model_C, X_train_C.columns, "Feature Importance - 組合 C (刪除低重要性特徵)"
     )
 

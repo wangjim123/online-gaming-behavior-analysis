@@ -5,16 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91cf4163-fdf1-42ed-be57-629c4e86e6f2" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/PythonProject.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LGBM.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plot_feature_importance.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/read_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Data1_Churn_Prediction.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Data1_Reason_for_churn.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Payer_Conversion_Rate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PythonProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PythonProject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LGBM.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data1_LGBM.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot_feature_importance.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data1_plot_feature_importance.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/read_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/read_data.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,67 +33,79 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "wangjim123"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/wangjim123/online-gaming-behavior-analysis.git",
+    "accountId": "86a277f9-5b56-4c9b-b1bd-6aab25df45a4"
+  }
+}]]></component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.237743505603062E-4" />
-      <entry key="MS500" value="0.16539642998851503" />
-      <entry key="S2" value="0.6377402340238546" />
-      <entry key="S5" value="0.8590780232910992" />
-      <entry key="S10" value="1.2337673405498029" />
-      <entry key="S30" value="3.2514579247780366" />
-      <entry key="S60" value="5.209921428858929" />
-      <entry key="M2" value="7.299981209894511" />
-      <entry key="M5" value="10.450170300309296" />
-      <entry key="M10" value="15.114587464964371" />
-      <entry key="M15" value="22.053523247337655" />
-      <entry key="M30" value="50.62928596737578" />
-      <entry key="H1" value="98.10415102428799" />
-      <entry key="H2" value="144.83034399722425" />
-      <entry key="H4" value="178.22812499334913" />
-      <entry key="D1" value="213.11123720723407" />
-      <entry key="W1" value="219.85279961240795" />
+      <entry key="MS100" value="1.0001610727795982" />
+      <entry key="MS500" value="1.1825421427921388" />
+      <entry key="S2" value="2.033636760504868" />
+      <entry key="S5" value="3.0040672993859587" />
+      <entry key="S10" value="3.739571440437649" />
+      <entry key="S30" value="4.498157677080789" />
+      <entry key="S60" value="4.736888560072593" />
+      <entry key="M2" value="4.868011768650614" />
+      <entry key="M5" value="6.082698707515463" />
+      <entry key="M10" value="14.372962713773756" />
+      <entry key="M15" value="24.78786790884867" />
+      <entry key="M30" value="51.36420212608035" />
+      <entry key="H1" value="89.65731336896322" />
+      <entry key="H2" value="152.16551442564642" />
+      <entry key="H4" value="247.0195611483767" />
+      <entry key="D1" value="448.46514857253493" />
+      <entry key="W1" value="506.371682373916" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0000000004610046" />
-      <entry key="S5" value="1.0001843018569403" />
-      <entry key="S10" value="1.0137172070983662" />
-      <entry key="S30" value="1.2907475698650133" />
-      <entry key="S60" value="1.719167701521275" />
-      <entry key="M2" value="2.224765483759363" />
-      <entry key="M5" value="2.9264724004433598" />
-      <entry key="M10" value="3.601745968133933" />
-      <entry key="M15" value="4.254712877007838" />
-      <entry key="M30" value="6.312902913043891" />
-      <entry key="H1" value="9.383327279645773" />
-      <entry key="H2" value="12.308126944937511" />
-      <entry key="H4" value="14.373371427566946" />
-      <entry key="D1" value="16.516768613715858" />
-      <entry key="W1" value="16.92975765615629" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="1.1962567436499013E-243" />
+      <entry key="S5" value="6.778440053214682E-98" />
+      <entry key="S10" value="2.6035441832234506E-49" />
+      <entry key="S30" value="6.420549698812032E-17" />
+      <entry key="S60" value="8.583720325995848E-9" />
+      <entry key="M2" value="1.1374016190632258E-4" />
+      <entry key="M5" value="0.038300474608417" />
+      <entry key="M10" value="0.2801823477226443" />
+      <entry key="M15" value="0.5846587227543278" />
+      <entry key="M30" value="1.6164787344597396" />
+      <entry key="H1" value="3.8890540915815834" />
+      <entry key="H2" value="8.281796894749297" />
+      <entry key="H4" value="14.874274150413319" />
+      <entry key="D1" value="28.450011170269978" />
+      <entry key="W1" value="32.295931377831266" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.317533385459173E-4" />
-      <entry key="MS500" value="0.19335328347018466" />
-      <entry key="S2" value="1.040818024610895" />
-      <entry key="S5" value="1.551282230020817" />
-      <entry key="S10" value="2.0622148680201766" />
-      <entry key="S30" value="4.435651355098988" />
-      <entry key="S60" value="6.848201601470739" />
-      <entry key="M2" value="9.467485083858843" />
-      <entry key="M5" value="13.344439164591273" />
-      <entry key="M10" value="18.695431198401476" />
-      <entry key="M15" value="26.29072513515072" />
-      <entry key="M30" value="56.92720487520773" />
-      <entry key="H1" value="107.47513553867715" />
-      <entry key="H2" value="157.12995201587736" />
-      <entry key="H4" value="192.5964019921445" />
-      <entry key="D1" value="229.6270116674824" />
-      <entry key="W1" value="236.7824112438153" />
+      <entry key="MS100" value="8.501470806094129E-4" />
+      <entry key="MS500" value="0.2571663044131167" />
+      <entry key="S2" value="1.3139299249878267" />
+      <entry key="S5" value="2.4794417383203524" />
+      <entry key="S10" value="3.3798073074463955" />
+      <entry key="S30" value="4.343426995465506" />
+      <entry key="S60" value="4.6539526831659686" />
+      <entry key="M2" value="4.825135392821816" />
+      <entry key="M5" value="6.100113616572095" />
+      <entry key="M10" value="14.630649406201837" />
+      <entry key="M15" value="25.347996663338165" />
+      <entry key="M30" value="52.95771689874173" />
+      <entry key="H1" value="93.52858871931937" />
+      <entry key="H2" value="160.43422764198368" />
+      <entry key="H4" value="261.8844831275427" />
+      <entry key="D1" value="476.9126655975927" />
+      <entry key="W1" value="538.6672198528584" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -112,7 +123,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.Churn_Prediction.executor": "Run",
     "Python.LGBM.executor": "Run",
+    "Python.Payer_Conversion_Rate.executor": "Run",
     "Python.main.executor": "Run",
     "Python.train_lgbm.executor": "Run",
     "RunOnceActivity.MCP Project settings loaded": "true",
@@ -124,7 +137,7 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/Users/USER/Desktop/PythonProject",
+    "last_opened_file_path": "C:/Users/user/PycharmProjects/online-gaming-behavior-analysis",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.jshint": "true",
     "node.js.detected.package.tslint": "true",
@@ -135,10 +148,15 @@
     "to.speed.mode.migration.done": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\PycharmProjects\online-gaming-behavior-analysis" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-6fa658e1df1a-5bd6d13a2a75-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-262.8665.369" />
+        <option value="bundled-python-sdk-821f704e66d9-5bd6d13a2a75-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-262.9437.214" />
       </set>
     </attachedChunks>
   </component>
@@ -151,6 +169,7 @@
       <updated>1786461130398</updated>
       <workItem from="1786461131424" duration="772000" />
       <workItem from="1786535108172" duration="8452000" />
+      <workItem from="1786584434372" duration="20078000" />
     </task>
     <servers />
   </component>
@@ -170,7 +189,10 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PythonProject$LGBM.coverage" NAME="LGBM 覆蓋結果" MODIFIED="1786541131933" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/PythonProject$main.coverage" NAME="main 覆蓋結果" MODIFIED="1786542440911" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/online_gaming_behavior_analysis$main.coverage" NAME="main Coverage Results" MODIFIED="1786607604098" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/online_gaming_behavior_analysis$Payer_Conversion_Rate.coverage" NAME="Payer_Conversion_Rate Coverage Results" MODIFIED="1786590122591" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PythonProject$train_lgbm.coverage" NAME="train_lgbm 覆蓋結果" MODIFIED="1786537472798" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PythonProject$main.coverage" NAME="main 覆蓋結果" MODIFIED="1786542440911" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/online_gaming_behavior_analysis$Churn_Prediction.coverage" NAME="Churn_Prediction Coverage Results" MODIFIED="1786601029238" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
