@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix , classification_report, roc_auc_score, average_precision_score, f1_score
 import lightgbm as lgb
+import os
 
 def main(df1):
     df = df1.copy()
@@ -73,7 +74,13 @@ def train(X_train, X_test, y_train, y_test, model):
     feature_imp.tail(10).plot(kind='barh', color='#2b5c8f')
     plt.title('Top 10 Feature Importances (LightGBM Churn Model)')
     plt.xlabel('Split Importance (Frequency of Feature Split)')
+    # 標題
     plt.tight_layout()
+    # 存檔
+    os.makedirs("Data1_png", exist_ok=True)
+    output_path = os.path.join("Data1_png", "Data1_Top_10_Feature_Importances_(LightGBM_Churn_Model).png")
+    plt.savefig(output_path, dpi=300, bbox_inches="tight")
+    #---------------------------------------------------------
     plt.show()
 
 def churn_analysis(X_test, df, model):

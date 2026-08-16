@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-
+import os
 def main(model, feature_names, title):
     # --- 解決 Matplotlib 中文顯示與負號顯示問題 ---
     plt.rcParams['font.sans-serif'] = [
@@ -36,5 +36,11 @@ def main(model, feature_names, title):
     plt.title(title, fontsize=14, fontweight="bold")
     plt.xlabel("Importance (Total Gain)", fontsize=12)  # <-- 改成 Gain
     plt.ylabel("Features", fontsize=12)
+    # 標題
     plt.tight_layout()
+    # 存檔
+    os.makedirs("Data1_png", exist_ok=True)
+    output_path = os.path.join("Data1_png", f"Data1{title}.png")
+    plt.savefig(output_path, dpi=300, bbox_inches="tight")
+    #---------------------------------------------------------
     plt.show()

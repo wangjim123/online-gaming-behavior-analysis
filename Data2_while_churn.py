@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from sklearn.metrics import f1_score, fbeta_score, precision_score, recall_score
 from sklearn.model_selection import StratifiedKFold, train_test_split
+import os
 
 def main(df1):
     df = df1.copy()
@@ -132,11 +133,11 @@ def main(df1):
 
     print("=== 🎯 測試集 (Test Set) 評估對比 ===")
     print(
-        f"1. 固定閥值 (0.50) -> F2: {test_f2_def:.4f} | Precision: {test_prec_def:.4f}"
+        f"1. 固定閥值 (0.50) -> F1: {test_f2_def:.4f} | Precision: {test_prec_def:.4f}"
         f" | Recall: {test_rec_def:.4f}"
     )
     print(
-        f"2. CV最佳閥值 ({best_threshold:.2f}) -> F2: {test_f2_opt:.4f} | Precision:"
+        f"2. CV最佳閥值 ({best_threshold:.2f}) -> F1: {test_f2_opt:.4f} | Precision:"
         f" {test_prec_opt:.4f} | Recall: {test_rec_opt:.4f}"
     )
 
@@ -255,5 +256,11 @@ def main(df1):
             color="#c0392b",
         )
 
+    # 標題
     plt.tight_layout()
+    # 存檔
+    os.makedirs("Data2_png", exist_ok=True)
+    output_path = os.path.join("Data2_png", "Data2_while_churn.png")
+    plt.savefig(output_path, dpi=300, bbox_inches="tight")
+    #---------------------------------------------------------
     plt.show()

@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-
+import os
 def main(df1):
     df = df1.copy()
     level_threshold(df)
@@ -101,5 +101,11 @@ def plot_eda_summary(df1):
         ax3.text(bar.get_x() + bar.get_width() / 2, yval + 0.3, f'{yval:.2f}', ha='center', va='bottom',
                  fontweight='bold')
 
+    # 標題
     plt.tight_layout()
+    # 存檔
+    os.makedirs("Data1_png", exist_ok=True)
+    output_path = os.path.join("Data1_png", "Data1_reason_for_churn.png")
+    plt.savefig(output_path, dpi=300, bbox_inches="tight")
+    #---------------------------------------------------------
     plt.show()
