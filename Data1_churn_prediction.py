@@ -47,23 +47,30 @@ def main(df1):
     churn_analysis(X_test, df1, model)
 
 def train(X_train, X_test, y_train, y_test, model):
+    # 訓練集預測
+    y_train_pred = model.predict(X_train)
+    y_train_proba = model.predict_proba(X_train)[:, 1]
 
-    # 4. 預測類別與概率 & 模型評估
-    # ==========================================
-    y_pred = model.predict(X_test)
-    y_proba = model.predict_proba(X_test)[:, 1]
+    # 測試集預測
+    y_test_pred = model.predict(X_test)
+    y_test_proba = model.predict_proba(X_test)[:, 1]
+
+    # 計算指標
+    train_auc = roc_auc_score(y_train, y_train_proba)
+    test_auc = roc_auc_score(y_test, y_test_proba)
+
+    train_f1 = f1_score(y_train, y_train_pred, pos_label=1)
+    test_f1 = f1_score(y_test, y_test_pred, pos_label=1)
 
     print("\n=== LightGBM 模型評估結果 ===")
-    print(f"ROC-AUC Score: {roc_auc_score(y_test, y_proba):.4f}\n")
-    print(f"F1-Score : {f1_score(y_test, y_pred, pos_label=1):.4f} (預設門檻 0.5 下的流失抓取綜合分數)\n")
+    print(f"訓練集 ROC-AUC: {train_auc:.4f} | 測試集 ROC-AUC: {test_auc:.4f}")
+    print(f"訓練集 F1-Score: {train_f1:.4f} | 測試集 F1-Score: {test_f1:.4f}")
 
-    print(classification_report(y_test, y_pred, target_names=['Retain (0)', 'Churn (1)']))
+    print("\n--- [訓練集] 分類報告 ---")
+    print(classification_report(y_train, y_train_pred, target_names=['Retain (0)', 'Churn (1)']))
 
-    # 混淆矩陣
-    cm = confusion_matrix(y_test, y_pred)
-    print("混淆矩陣 (Confusion Matrix):")
-    print(f"真正留存 (TN): {cm[0, 0]} | 誤判流失 (FP): {cm[0, 1]}")
-    print(f"漏抓流失 (FN): {cm[1, 0]} | 成功預警 (TP): {cm[1, 1]}")
+    print("\n--- [測試集] 分類報告 ---")
+    print(classification_report(y_test, y_test_pred, target_names=['Retain (0)', 'Churn (1)']))
 
     # 5. 繪製 LightGBM 特徵重要性圖表
     # ==========================================
